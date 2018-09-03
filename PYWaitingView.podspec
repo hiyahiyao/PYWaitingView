@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "PYWaitingView"
   s.version      = "1.0.0"
+  s.swift_version = "4.0.0"
   s.summary      = "A waiting view that let you express your project"
   s.license      = "MIT"
   s.author       = { "Pierre Yao" => "pierrey.yao@gmail.com" }
