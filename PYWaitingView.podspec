@@ -20,8 +20,9 @@ Pod::Spec.new do |s|
   s.summary      = "A waiting view that let you express your project"
   s.license      = "MIT"
   s.author       = { "Pierre Yao" => "pierrey.yao@gmail.com" }
+  s.homepage     = "https://github.com/hiyahiyao/PYWaitingView"
   s.platform     = :ios, "11.2"
-  s.source       = { :git => "http://EXAMPLE/PYWaitingView.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/hiyahiyao/PYWaitingView.git", :tag => "#{s.version}" }
   s.source_files = "PYWaitingView", "PYWaitingView/**/*.{h,m,swift}"
 
 end

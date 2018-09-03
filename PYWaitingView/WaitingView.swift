@@ -12,17 +12,17 @@ import UIKit
 let kOpacity = "opacity"
 let kAnimateOpacity = "animateOpacity"
 
-class WaitingView: UIView {
+public class WaitingView: UIView {
     
-    var illustrationContainer = UIImageView()
+    private var illustrationContainer = UIImageView()
 	var colorView = UIView()
-	var illustrations = [UIImage]()
-	var timer: Timer?
-	var currentIndex = 0
+	public var illustrations = [UIImage]()
+	private var timer: Timer?
+	private var currentIndex = 0
 	// The time interval between each image flip
-	var imageFlipInterval: TimeInterval = 1
+	public var imageFlipInterval: TimeInterval = 1
 	// The time interval for each image pulse
-	var imagePulseInterval: TimeInterval = 1
+	public var imagePulseInterval: TimeInterval = 1
 	
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +38,7 @@ class WaitingView: UIView {
 		])
     }
 	
-	required init?(coder aDecoder: NSCoder) {
+	required public init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
     
@@ -47,7 +47,7 @@ class WaitingView: UIView {
 	/**
 	Launch waiting view animation
 	*/
-    func launchAnimation() {
+    private func launchAnimation() {
 		// We do this to avoid waiting "imageFlipInterval" before seeing an image
 		flipImage()
         timer = Timer.scheduledTimer(timeInterval: imageFlipInterval, target:self, selector: #selector(flipImage), userInfo: nil, repeats: true)
@@ -56,7 +56,7 @@ class WaitingView: UIView {
 	/**
 	Change "illustrationContainer" content with an image contains in "illustrations"
 	*/
-	@objc func flipImage() {
+	@objc private func flipImage() {
         if currentIndex == illustrations.count {
             currentIndex = 0
         }
@@ -77,7 +77,7 @@ class WaitingView: UIView {
 	/**
 	Show waiting view
 	*/
-    func show() {
+    public func show() {
 		self.launchAnimation()
         alpha = 0
 		UIView.animate(withDuration: -1) {
@@ -88,7 +88,7 @@ class WaitingView: UIView {
 	/**
 	Stop waiting view
 	*/
-    func stop() {
+    public func stop() {
 		timer?.invalidate()
 		UIView.animate(withDuration: -1, animations: {
 			self.alpha = 0
