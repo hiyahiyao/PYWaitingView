@@ -12,10 +12,9 @@ import UIKit
 let kOpacity = "opacity"
 let kAnimateOpacity = "animateOpacity"
 
-public class WaitingView: UIView {
+public class PYWaitingView: UIView {
     
     private var illustrationContainer = UIImageView()
-	var colorView = UIView()
 	public var illustrations = [UIImage]()
 	private var timer: Timer?
 	private var currentIndex = 0
