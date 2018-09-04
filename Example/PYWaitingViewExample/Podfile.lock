@@ -1,0 +1,16 @@
+PODS:
+  - PYWaitingView (1.0.0)
+
+DEPENDENCIES:
+  - PYWaitingView (from `~/Documents/PYWaitingView`)
+
+EXTERNAL SOURCES:
+  PYWaitingView:
+    :path: "~/Documents/PYWaitingView"
+
+SPEC CHECKSUMS:
+  PYWaitingView: 6f26ea08ae3c82b9c22b57a3c3243a32c97cc7fe
+
+PODFILE CHECKSUM: 9390e83ed0b7da1d02dd7491bba45fb5905598a7
+
+COCOAPODS: 1.5.3

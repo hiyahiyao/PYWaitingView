@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, ‘11.2’
+use_frameworks!
+
+target 'PYWaitingViewExample' do
+	pod 'PYWaitingView', '1.0.0'
+end
